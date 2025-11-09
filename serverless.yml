@@ -25,5 +25,29 @@ functions:
           method: post
           cors: true
           integration: lambda
+  modificar:
+    handler: ModificarAlumno.lambda_handler
+    events:
+      - http:
+          path: /alumno/modificar
+          method: put
+          cors: true
+          integration: lambda
+  eliminar:
+    handler: EliminarAlumno.lambda_handler
+    events:
+      - http:
+          path: /alumno/eliminar
+          method: delete
+          cors: true
+          integration: lambda
+  buscar:
+    handler: BuscarAlumno.lambda_handler
+    events:
+      - http: 
+          path: /alumno/buscar
+          method: post
+          cors: true
+          integration: lambda
 
 
